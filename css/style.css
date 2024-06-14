@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: linear-gradient(147.52deg, #F9FAFB 8.89%, #D2D6DB 100.48%);
+}
+
+
+
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px 16px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+
+}
+
+
+.navbar {
+  display: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-link {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+}
+
+.navbar-btns {
+
+  gap: 16px;
+  display: none;
+}
+
+
+
+#slideout-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 32px 16px 16px;
+  gap: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+
+}
+
+#slideout-menu.open {
+  transform: translateX(0);
+}
+
+
+
+
+.slideout-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.slideout-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+}
+
+
+.slideout-menu-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  margin-top: auto;
+}
+
+.btn-white,
+.btn-indigo {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.btn-white:focus,
+.btn-indigo:focus,
+.navbar-link:focus {
+  box-shadow: 0px 0px 0px 4px rgb(0.27 0.30 0.91 / 0.12);
+}
+
+@media screen and (min-width: 768px) {
+
+  .btn-open {
+    display: none;
+  }
+
+  .navbar,
+  .navbar-btns {
+    display: flex;
+  }
+
+  .header {
+    padding: 16px 112px 0px;
+  }
+
+  .content {
+    gap: 96px;
+  }
+}
